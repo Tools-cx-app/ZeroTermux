@@ -257,7 +257,6 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
             return
         } else {
             logger.quiet("Deleting old local file with wrong hash: " + localUrl)
-            文件。delete()
         }
     }
 
@@ -275,7 +274,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
 
     def checksum = new BigInteger(1, digest.digest()).toString(16)
     if (checksum != expectedChecksum) {
-        file.delete()
+        文件。delete()
         throw new GradleException("Wrong checksum for " + remoteUrl + ": expected: " + expectedChecksum + ", actual: " + checksum)
     }
 }
