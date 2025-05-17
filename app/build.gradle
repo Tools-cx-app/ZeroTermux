@@ -256,6 +256,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
         if (checksum == expectedChecksum) {
             return
         } else {
+            file.delete()
             logger.quiet("Deleting old local file with wrong hash: " + localUrl)
         }
     }
@@ -263,7 +264,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
     def remoteUrl = "https://github.com/termux/termux-packages/releases/download/bootstrap-" + version + "/bootstrap-" + arch + ".zip"
     logger.quiet("Downloading " + remoteUrl + " ...")
 
-    文件。parentFile.mkdirs()
+    file.parentFile.mkdirs()
     def out = new BufferedOutputStream(new FileOutputStream(file))
 
     def connection = new URL(remoteUrl).openConnection()
@@ -274,7 +275,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
 
     def checksum = new BigInteger(1, digest.digest()).toString(16)
     if (checksum != expectedChecksum) {
-        文件。delete()
+        file.delete()
         throw new GradleException("Wrong checksum for " + remoteUrl + ": expected: " + expectedChecksum + ", actual: " + checksum)
     }
 }
