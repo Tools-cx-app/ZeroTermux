@@ -1,0 +1,52 @@
+name: Build and Upload Android App
+
+# 触发条件：在 push 到 main 分支或创建 PR 到 main 分支时触发
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+# 工作流的作业
+jobs:
+  build:
+    # 使用 Ubuntu 系统
+    runs-on: ubuntu-latest
+
+    # 作业的步骤
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 设置 Java 环境（Android 编译需要 Java）
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '1.8'
+          
+      # 缓存 Gradle 缓存目录
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches/
+            ~/.gradle/wrapper/
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # 编译项目
+      - name: Build project
+        run: ./gradlew assembleRelease
+
+      # 上传 APK 文件作为构建产物
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: Android APK
+          path: app/build/outputs/apk/release/*.apk  # 根据你的项目结构调整路径
