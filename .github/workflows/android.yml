@@ -42,7 +42,9 @@ jobs:
 
       # 编译项目
       - name: Build project
-        run: ./gradlew assembleRelease
+        run: |
+         chmod +x gradlew
+         ./gradlew assembleRelease
 
       # 上传 APK 文件作为构建产物
       - name: Upload APK
