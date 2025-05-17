@@ -29,13 +29,13 @@ android {
         release {
             keyAlias 'phone1'
             keyPassword '654321'
-            storeFile file('D:\\签名文件\\phone.jks')
+            storeFile file('./app/dev_keystore.jks')
             storePassword '123456'
         }
         debug {
             keyAlias 'phone1'
             keyPassword '654321'
-            storeFile file('D:\\签名文件\\phone.jks')
+            storeFile file('./app/dev_keystore.jks')
             storePassword '123456'
         }
     }
@@ -257,14 +257,14 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
             return
         } else {
             logger.quiet("Deleting old local file with wrong hash: " + localUrl)
-            file.delete()
+            文件。delete()
         }
     }
 
     def remoteUrl = "https://github.com/termux/termux-packages/releases/download/bootstrap-" + version + "/bootstrap-" + arch + ".zip"
     logger.quiet("Downloading " + remoteUrl + " ...")
 
-    file.parentFile.mkdirs()
+    文件。parentFile.mkdirs()
     def out = new BufferedOutputStream(new FileOutputStream(file))
 
     def connection = new URL(remoteUrl).openConnection()
