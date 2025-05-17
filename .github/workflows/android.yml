@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v4.7.1
         with:
           distribution: 'adopt'
-          java-version: '1.8'
+          java-version: '11'
           
       # 缓存 Gradle 缓存目录
       - name: Cache Gradle dependencies
