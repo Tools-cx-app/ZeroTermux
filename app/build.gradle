@@ -27,13 +27,13 @@ android {
         release {
             keyAlias 'phone1'
             keyPassword '654321'
-            storeFile file('./app/dev_keystore.jks')
+            storeFile file('./dev_keystore.jks')
             storePassword '123456'
         }
         debug {
             keyAlias 'phone1'
             keyPassword '654321'
-            storeFile file('./app/dev_keystore.jks')
+            storeFile file('./dev_keystore.jks')
             storePassword '123456'
         }
     }
