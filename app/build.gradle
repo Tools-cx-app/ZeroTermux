@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion project.properties.compileSdkVersion.toInteger()
-    ndkVersion '27.0.12077973'
+    ndkVersion '29.0.13846066'
 
     buildFeatures {
         viewBinding true
