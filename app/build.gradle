@@ -27,7 +27,13 @@ android {
         debug {
             keyAlias 'phone1'
             keyPassword '654321'
-            storeFile file('./dev_keystore.jks')
+            storeFile file('./key.jks')
+            storePassword '123456'
+        }
+        release {
+            keyAlias 'phone1'
+            keyPassword '654321'
+            storeFile file('./key.jks')
             storePassword '123456'
         }
     }
@@ -171,6 +177,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
