@@ -2343,9 +2343,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                     "&& termux-x11 \n");
                 getDrawer().smoothClose();
                 break;
-            case R.id.install_x11_apk:
-                startActivity(new Intent(TermuxActivity.this, ZTInstallActivity.class));
-                break;
             case R.id.x11_so_install:
                 //修复SO环境
                 UUtils.runOnThread(() -> {
