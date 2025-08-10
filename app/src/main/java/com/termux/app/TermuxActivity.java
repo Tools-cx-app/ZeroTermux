@@ -141,7 +141,6 @@ import com.termux.zerocore.http.HTTPIP;
 import com.termux.zerocore.otg.OTGManager;
 import com.termux.zerocore.popuwindow.MenuLeftPopuListWindow;
 import com.termux.zerocore.settings.TimerActivity;
-import com.termux.zerocore.settings.ZTInstallActivity;
 import com.termux.zerocore.settings.ZeroTermuxSettingsActivity;
 import com.termux.zerocore.settings.ZeroTermuxX11Settings;
 import com.termux.zerocore.settings.ZtSettingsActivity;
