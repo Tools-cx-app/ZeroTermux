@@ -1696,8 +1696,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
     private void initZeroView() {
         code_ll = findViewById(R.id.code_ll);
-        x11_keyboard_visible = findViewById(R.id.x11_keyboard_visible);
-        x11_keyboard_gone = findViewById(R.id.x11_keyboard_gone);
         scrollView_main = findViewById(R.id.scrollView_main);
         file_layout = findViewById(R.id.file_layout);
         main_card = findViewById(R.id.main_card);
