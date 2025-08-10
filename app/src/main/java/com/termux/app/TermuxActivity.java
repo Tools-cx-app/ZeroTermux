@@ -1642,7 +1642,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private CardView info_card;
     private LinearLayout rongqi;
     private LinearLayout back_res;
-    private LinearLayout linux_online;
     private LinearLayout msg;
     private LinearLayout files_mulu;
     private TextView version;
@@ -1707,7 +1706,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         rongqi = findViewById(R.id.rongqi);
         layout_menu = findViewById(R.id.layout_menu);
         back_res = findViewById(R.id.back_res);
-        linux_online = findViewById(R.id.linux_online);
         msg = findViewById(R.id.msg);
         files_mulu = findViewById(R.id.files_mulu);
         version = findViewById(R.id.version);
@@ -1754,7 +1752,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         code_ll.setOnClickListener(this);
         rongqi.setOnClickListener(this);
         back_res.setOnClickListener(this);
-        linux_online.setOnClickListener(this);
         msg.setOnClickListener(this);
         online_sh.setOnClickListener(this);
         zerotermux_bbs.setOnClickListener(this);
@@ -1949,24 +1946,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 backRestoreDialog.show();
                 backRestoreDialog.setCancelable(true);
                 backRestoreDialog.createStoragePath();
-                break;
-            case R.id.linux_online:
-                LoadingDialog loadingDialog = new LoadingDialog(this);
-                loadingDialog.show();
-                loadingDialog.setCancelable(false);
-                UUtils.runOnThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        UUtils.writerFile("linux/termux_linux_toolx.zip", new File(FileUrl.INSTANCE.getMainHomeUrl(), "/termux_linux_toolx.zip"));
-                        UUtils.runOnThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                loadingDialog.dismiss();
-                                mTerminalView.sendTextToTerminal(CodeString.INSTANCE.getRunLinuxSh());
-                            }
-                        });
-                    }
-                });
                 break;
 
             case R.id.msg:
