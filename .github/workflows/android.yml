@@ -51,5 +51,5 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: zerotermux
-          path: app/build/outputs/apk/release/*.apk  # 根据你的项目结构调整路径
-          retention-days: 15
+          path: app/build/outputs/apk/release/app-universal-release.apk  # 根据你的项目结构调整路径
+          retention-days: 1
