@@ -1686,14 +1686,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private VideoView back_video;
     private MainActivity mMainActivity;
 
-    private LinearLayout x11_features_settings;
-    private LinearLayout x11_display_terminal;
-    private LinearLayout x11_hide_terminal;
-    private LinearLayout x11_environment;
-    private LinearLayout x11_so_install;
-    private LinearLayout x11_keyboard_visible;
-    private LinearLayout x11_keyboard_gone;
-
     private FrameLayout frame_file;
     private RelativeLayout session_rl;
 
@@ -1760,12 +1752,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         back_video = mTermuxActivityRootView.getBack_video();
         mMainActivity = mTermuxActivityRootView.getMainActivity();
 
-        x11_features_settings = findViewById(R.id.x11_features_settings);
-        x11_environment = findViewById(R.id.x11_environment);
-        x11_so_install = findViewById(R.id.x11_so_install);
-        x11_display_terminal = findViewById(R.id.x11_display_terminal);
-        x11_hide_terminal = findViewById(R.id.x11_hide_terminal);
-
         try {
             double_tishi.setText(double_tishi.getText() + "\n" + TermuxInstaller.determineTermuxArchName().toUpperCase());
 
@@ -1773,13 +1759,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             e.printStackTrace();
         }
 
-        x11_keyboard_visible.setOnClickListener(this);
-        x11_keyboard_gone.setOnClickListener(this);
-        x11_so_install.setOnClickListener(this);
-        x11_environment.setOnClickListener(this);
-        x11_features_settings.setOnClickListener(this);
-        x11_display_terminal.setOnClickListener(this);
-        x11_hide_terminal.setOnClickListener(this);
         code_ll.setOnClickListener(this);
         rongqi.setOnClickListener(this);
         back_res.setOnClickListener(this);
@@ -2326,115 +2305,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 });
                 mBeautifySettingDialog.show();
                 mBeautifySettingDialog.setCancelable(true);
-                break;
-
-            case R.id.x11_features_settings:
-                //X11 设置
-                startActivity(new Intent(TermuxActivity.this, ZeroTermuxX11Settings.class));
-                break;
-            case R.id.x11_environment:
-                // 复制环境
-                // am start -a android.intent.action.zt.termux.x11
-                mTerminalView.sendTextToTerminal("pkg install x11-repo " +
-                    "&& pkg install termux-x11-nightly " +
-                    "&& termux-x11 \n");
-                getDrawer().smoothClose();
-                break;
-            case R.id.x11_so_install:
-                //修复SO环境
-                UUtils.runOnThread(() -> {
-                    File aislePathSo = new File(FileUrl.INSTANCE.getAislePathSo());
-                    File aislePathAPKFile = new File(FileUrl.INSTANCE.getAislePathAPK());
-                    try {
-                        Os.chmod(aislePathAPKFile.getAbsolutePath(), 0777);
-                    } catch (ErrnoException e) {
-                        e.printStackTrace();
-                    }
-                    if (!aislePathAPKFile.exists()) {
-                        boolean delete = aislePathAPKFile.delete();
-                        Log.i("TAG", "installAisleFile delete: " + delete);
-                    }
-                    if (!ZFileUUtils.writerFile(mInternalPassage? "x11/aisle_zt_loader.apk"
-                        : "x11/aisle_x11_loader.apk", aislePathAPKFile)) {
-                        UUtils.runOnUIThread(() -> {
-                           UUtils.showMsg(getString(R.string.x11_so_install_error));
-                        });
-                        return;
-                    }
-                    try {
-                        Os.chmod(aislePathAPKFile.getAbsolutePath(), 0444);
-                    } catch (ErrnoException e) {
-                        e.printStackTrace();
-                    }
-                    ZFileUUtils.writerFile("x11/libXlorie.so", aislePathSo);
-                    UUtils.runOnUIThread(() -> {
-                        UUtils.showMsg(getString(R.string.x11_so_install_ok));
-                    });
-                });
-                break;
-            case R.id.x11_display_terminal:
-                // 显示终端
-                ZTUserBean ztUserBeanShow = UserSetManage.Companion.get().getZTUserBean();
-                ztUserBeanShow.setShowCommand(true);
-                if (MainActivity.isConnected()) {
-                    mTerminalView.setVisibility(View.VISIBLE);
-                    double_tishi.setVisibility(View.VISIBLE);
-                    setExtraKeysViewVisible(true);
-                    if (mMainActivity != null) {
-                        mMainActivity.setTerminalToolbarViewVisible(false);
-                    }
-                    setSummaryVisible();
-                    initColorConfig();
-                    back_color.setVisibility(View.VISIBLE);
-                } else {
-                    if (mTerminalView.getVisibility() == View.INVISIBLE) {
-                        mTerminalView.setVisibility(View.VISIBLE);
-                        UUtils.showMsg(getString(R.string.x11_msg_error));
-                    } else {
-                        UUtils.showMsg(getString(R.string.x11_not_connect));
-                    }
-                }
-                UserSetManage.Companion.get().setZTUserBean(ztUserBeanShow);
-                break;
-            case R.id.x11_hide_terminal:
-                // 隐藏终端
-                ZTUserBean ztUserBeanHide = UserSetManage.Companion.get().getZTUserBean();
-                ztUserBeanHide.setShowCommand(false);
-                if (MainActivity.isConnected()) {
-                    mTerminalView.setVisibility(View.INVISIBLE);
-                    setExtraKeysViewVisible(false);
-                    if (mMainActivity != null) {
-                        mMainActivity.setTerminalToolbarViewVisible(true);
-                    }
-                    double_tishi.setVisibility(View.GONE);
-                    back_color.setVisibility(View.GONE);
-                    back_img.setVisibility(View.GONE);
-                    back_video.setVisibility(View.GONE);
-                } else {
-                    if (mTerminalView.getVisibility() == View.INVISIBLE) {
-                        mTerminalView.setVisibility(View.VISIBLE);
-                        UUtils.showMsg(getString(R.string.x11_msg_error));
-                    } else {
-                        UUtils.showMsg(getString(R.string.x11_not_connect));
-                    }
-                }
-
-                UserSetManage.Companion.get().setZTUserBean(ztUserBeanHide);
-                break;
-
-            case R.id.x11_keyboard_visible:
-                if (MainActivity.isConnected()) {
-                    mMainActivity.setTerminalToolbarViewVisible(true);
-                } else {
-                    UUtils.showMsg(getString(R.string.x11_not_connect));
-                }
-                break;
-            case R.id.x11_keyboard_gone:
-                if (MainActivity.isConnected()) {
-                    mMainActivity.setTerminalToolbarViewVisible(false);
-                } else {
-                    UUtils.showMsg(getString(R.string.x11_not_connect));
-                }
                 break;
 
 
