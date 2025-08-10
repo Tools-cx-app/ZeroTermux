@@ -1643,9 +1643,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout rongqi;
     private LinearLayout back_res;
     private LinearLayout linux_online;
-    private LinearLayout qemu;
-    private LinearLayout cmd_command;
-    private LinearLayout moe;
     private LinearLayout msg;
     private LinearLayout files_mulu;
     private TextView version;
@@ -1711,9 +1708,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         layout_menu = findViewById(R.id.layout_menu);
         back_res = findViewById(R.id.back_res);
         linux_online = findViewById(R.id.linux_online);
-        qemu = findViewById(R.id.qemu);
-        cmd_command = findViewById(R.id.cmd_command);
-        moe = findViewById(R.id.moe);
         msg = findViewById(R.id.msg);
         files_mulu = findViewById(R.id.files_mulu);
         version = findViewById(R.id.version);
@@ -1761,9 +1755,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         rongqi.setOnClickListener(this);
         back_res.setOnClickListener(this);
         linux_online.setOnClickListener(this);
-        qemu.setOnClickListener(this);
-        cmd_command.setOnClickListener(this);
-        moe.setOnClickListener(this);
         msg.setOnClickListener(this);
         online_sh.setOnClickListener(this);
         zerotermux_bbs.setOnClickListener(this);
@@ -1975,50 +1966,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                             }
                         });
                     }
-                });
-                break;
-            case R.id.qemu:
-
-                ArrayList<MenuLeftPopuListWindow.MenuLeftPopuListData> menuLeftPopuListData1 = new ArrayList<>();
-                //官方
-                MenuLeftPopuListWindow.MenuLeftPopuListData qemuData = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.qemu_ico_hai, UUtils.getString(R.string.海的QEMU), 5);
-                menuLeftPopuListData1.add(qemuData);
-
-                MenuLeftPopuListWindow.MenuLeftPopuListData zeroData = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.windows_xp, UUtils.getString(R.string.Zero), 501);
-                menuLeftPopuListData1.add(zeroData);
-
-                MenuLeftPopuListWindow.MenuLeftPopuListData win7Data = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.windows, UUtils.getString(R.string.Win7模拟), 502);
-                menuLeftPopuListData1.add(win7Data);
-
-                MenuLeftPopuListWindow.MenuLeftPopuListData winXpData = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.windows_xp_ico, UUtils.getString(R.string.WinXp), 503);
-                menuLeftPopuListData1.add(winXpData);
-
-                showMenuDialog(menuLeftPopuListData1, qemu);
-
-                break;
-            case R.id.cmd_command:
-
-
-                BoomCommandDialog boomCommandDialog = new BoomCommandDialog(TermuxActivity.this);
-                boomCommandDialog.show();
-                boomCommandDialog.setCancelable(true);
-
-                break;
-            case R.id.zerotermux_bbs:
-
-
-                Intent intent2 = new Intent(this, WebViewActivity.class);
-                intent2.putExtra("title", "ZeroTermux 论坛");
-                intent2.putExtra("content", HTTPIP.ZERO_BBS);
-                startActivity(intent2);
-
-                break;
-            case R.id.moe:
-                SwitchDialog switchDialog = switchDialogShow(UUtils.getString(R.string.警告), UUtils.getString(R.string.zt_moe_remove));
-                switchDialog.getCancel().setOnClickListener(v1 -> switchDialog.dismiss());
-                switchDialog.getOk().setOnClickListener(v12 -> {
-                    switchDialog.dismiss();
-                    mTerminalView.sendTextToTerminal(CodeString.INSTANCE.getRunMoeSh());
                 });
                 break;
 
