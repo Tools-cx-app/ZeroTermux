@@ -2,7 +2,7 @@
 
 <!DOCTYPE resources [
     <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
-    <!ENTITY TERMUX_APP_NAME "ZeroTermux">
+    <!ENTITY TERMUX_APP_NAME "Zako">
     <!ENTITY TERMUX_API_APP_NAME "Termux:API">
     <!ENTITY TERMUX_BOOT_APP_NAME "Termux:Boot">
     <!ENTITY TERMUX_FLOAT_APP_NAME "Termux:Float">
@@ -14,9 +14,9 @@
 
 <resources>
     <string name="application_name">&TERMUX_APP_NAME;</string>
-    <string name="shared_user_label">ZeroTermux 用户</string>
+    <string name="shared_user_label">Zako 用户</string>
 
-    <string name="app_name">ZeroTermux</string>
+    <string name="app_name">Zako</string>
 
     <!-- Termux RUN_COMMAND permission -->
     <string name="permission_run_command_label">运行命令 &TERMUX_APP_NAME; 环境</string>
@@ -352,8 +352,8 @@
     <string name="字体选择">字体选择</string>
     <string name="您一切选择的字体来源于互联网">您一切选择的字体来源于互联网</string>
     <string name="没有在内部存储">没有在[内部存储/xinhao/font]找到任何字体文件</string>
-    <string name="Utermux默认字体">ZeroTermux默认字体</string>
-    <string name="Utermux中文字体">ZeroTermux中文字体</string>
+    <string name="Utermux默认字体">Zako默认字体</string>
+    <string name="Utermux中文字体">Zako中文字体</string>
     <string name="创建文件错误">创建文件错误</string>
     <string name="字体设置成功">字体设置成功</string>
     <string name="如果进入终端没有任何显示">如果进入终端没有任何显示代表您的字体文件损坏,请重新设置字体</string>
@@ -395,18 +395,18 @@
 
 
 
-        ZeroTermux 是根据 Termux 二次开发的一个非盈利性的软件\n\n部分版权归ZeroTermux所属\n\n对任何法律问题及风险不承担任何责任，没有任何商业目的\n\n\n
+        Zako 是根据 ZeroTermux 二次开发的一个非盈利性的软件\n\n部分版权归Zako所属\n\n对任何法律问题及风险不承担任何责任，没有任何商业目的\n\n\n
         切勿使用到违法用途！\n
         \n
         请遵纪守法，做一个良好公民,\n
         \n
-        ZeroTermux 的初心是让你更快的走进linux世界,为以后建设社会贡献一份精神,出一份力\n
+        Zako 的初心是让你更快的走进linux世界,为以后建设社会贡献一份精神,出一份力\n
         \n
 
         在使用一定程度之后,极力建议你过渡到官方termux[入门之后开始使用](推荐),\n
         \n
 
-        毕竟ZT能帮你一时，却帮不了你一世!\n
+        毕竟Zako能帮你一时，却帮不了你一世!\n
         \n
 
 
@@ -414,40 +414,40 @@
         \n
         请关闭sd卡授权在执行该【删除】功能\n
         \n
-        如果由你的操作(不局限于【切换系统】的【删除功能】,这里说明的是ZeroTermux的所有功能)失误导致你的SD卡包括:\n
+        如果由你的操作(不局限于【切换系统】的【删除功能】,这里说明的是Zako的所有功能)失误导致你的SD卡包括:\n
         \n
         照片\n
         视频\n
         音频\n
-        以及其它所有数据,由你(ZeroTermux(简称ZT)的个人使用用户)自己承担\n
+        以及其它所有数据,由你(Zako(简称ZT)的个人使用用户)自己承担\n
         \n
 
 
-        公共仓库下载来源不可控,不属于ZeroTermux所能控制的,全部来源于第三方仓库,ZeroTermux以及作者不会对第三方仓库来源的所有东西负责!\n
+        公共仓库下载来源不可控,不属于Zako所能控制的,全部来源于第三方仓库,Zako以及作者不会对第三方仓库来源的所有东西负责!\n
 \n
         \n
-        如果第三方仓库有属于一切违法的活动/文件,由提供第三方仓库的作者承担任何法律责任!ZeroTermux以及作者不承担任何法律/其它责任!
+        如果第三方仓库有属于一切违法的活动/文件,由提供第三方仓库的作者承担任何法律责任!Zako以及作者不承担任何法律/其它责任!
 
         \n
         \n
         授权许可:\n
         \n
 
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n
+        Zako所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n
         \n
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
+        Zako所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
+        Zako所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
 
-        1.本软件(ZeroTermux)为开源软件,你可以自由分发、复制、更改,但请遵循GPL协议!\n\n
+        1.本软件(Zako)为开源软件,你可以自由分发、复制、更改,但请遵循GPL协议!\n\n
         2.软件遵循GPL协议(http://www.opensource.org/licenses/gpl-2.0.php)\n\n
-        3.本软件(ZeroTermux)的所有功能均为学习交流使用,切勿商用,如用户(使用ZeroTermux用户)的意外操作、有意操作、无意操作等由用户承担!\n
-        4.本软件(ZeroTermux)由第一条例一样为免费学习交流使用，软件内涉及的图标以及字体均来源于互联网。\n
-         4.1.字体为Android默认字体,如使用其他字体请用户(使用ZeroTermux用户)承担所有风险以及法律责任。\n
+        3.本软件(Zako)的所有功能均为学习交流使用,切勿商用,如用户(使用Zako用户)的意外操作、有意操作、无意操作等由用户承担!\n
+        4.本软件(Zako)由第一条例一样为免费学习交流使用，软件内涉及的图标以及字体均来源于互联网。\n
+         4.1.字体为Android默认字体,如使用其他字体请用户(使用Zako用户)承担所有风险以及法律责任。\n
          4.2.图标使用为阿里巴巴ICO公用图库，使用该图标的原则是学习与交流,并非商用,如有侵权立即删除。\n
-        5.在本软件(ZeroTermux)内使用的的恢复包、数据包、zip包等都有使用风险，切全部都来源于互联网，请用户酌情使用,如有造成无法挽回的损失,请用户承担风险。\n
-        6.所有恢复包、数据包、模块包、zip包ZeroTermux不能控制其内容,如有包内侵权本软件作者不承担任何责任，均由恢复包、数据包、zip包制作者承担(tar.gz备份功能法律声明)。\n
+        5.在本软件(Zako)内使用的的恢复包、数据包、zip包等都有使用风险，切全部都来源于互联网，请用户酌情使用,如有造成无法挽回的损失,请用户承担风险。\n
+        6.所有恢复包、数据包、模块包、zip包Zako不能控制其内容,如有包内侵权本软件作者不承担任何责任，均由恢复包、数据包、zip包制作者承担(tar.gz备份功能法律声明)。\n
         7.感谢所有该项目所应用到功能的作者。\n
-        8.使用ZeroTermux会有直接或间接的损害你的设备,如有造成无法挽回的损失由用户承担,本软件以及作者不承担任何法律等责任\n
+        8.使用Zako会有直接或间接的损害你的设备,如有造成无法挽回的损失由用户承担,本软件以及作者不承担任何法律等责任\n
 
 
     </string>
@@ -476,7 +476,7 @@
     <string name="本机IP">本机IP</string>
 
     <string name="Zero功能">Zero功能</string>
-    <string name="ZeroTermux内置功能">ZeroTermux 脚本区域(长按打开作者地址)</string>
+    <string name="Zako内置功能">Zako 脚本区域(长按打开作者地址)</string>
     <string name="内置nginx">Nginx(内置)</string>
     <string name="Nginx开关">Nginx开关</string>
     <string name="访问linux目录">访问linux目录</string>
@@ -495,7 +495,7 @@
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">实验功能</string>
-    <string name="ZeroTermux实验功能">ZeroTermux 实验功能</string>
+    <string name="Zako实验功能">Zako 实验功能</string>
     <string name="网络ADB">网络ADB(ROOT)</string>
     <string name="网络ADBNo">网络ADB(无ROOT)</string>
     <string name="没有找到本机的ROOT权限">没有找到本机的ROOT权限,是否强制继续?</string>
@@ -635,7 +635,7 @@
     <string name="获取线上">获取线上</string>
     <string name="线上脚本">线上脚本</string>
     <string name="本地脚本">本地脚本</string>
-    <string name="请双击命令窗口试试">ZeroTermux\n双击命令窗口打开快捷栏\n双击最左(音量+按键)\n右(音量-按键)打开菜单/会话栏\n双指单击打开 工具箱\n右侧菜单打开内置文件浏览器</string>
+    <string name="请双击命令窗口试试">Zako\n双击命令窗口打开快捷栏\n双击最左(音量+按键)\n右(音量-按键)打开菜单/会话栏\n双指单击打开 工具箱\n右侧菜单打开内置文件浏览器</string>
 
     <string name="在线脚本">在线脚本</string>
     <string name="在线脚本服务器名称">Server Name</string>
@@ -645,7 +645,7 @@
     <string name="当前文件下载已被禁止">当前文件下载已被禁止</string>
     <string name="此脚本数据错误">此脚本数据错误,请尝试联系管理员</string>
 
-    <string name="ZeroTermux论坛">ZeroTermux论坛</string>
+    <string name="Zako论坛">Zako论坛</string>
     <string name="Zero论坛">Zero论坛</string>
 
     <string name="美化设置">美化设置</string>
@@ -696,7 +696,7 @@
     <string name="font_name">字体名称:</string>
     <string name="font_instance">字体示例:</string>
     <string name="font_path">字体路径:</string>
-    <string name="instance_zero">ZeroTermux|中文字体</string>
+    <string name="instance_zero">Zako|中文字体</string>
 
     <string name="clipboard_text">注意：此剪贴板只会记录APP内的内容</string>
     <string name="clipboard_title">剪贴板标题:</string>
@@ -730,7 +730,7 @@
 
     <string name="telegram_group">Telegram</string>
 
-    <string name="opne_in_zerotermux">使用ZeroTermux打开</string>
+    <string name="opne_in_Zako">使用Zako打开</string>
 
     <string name="move_file_to_zt">移动文件到Zero Termux</string>
 
@@ -738,7 +738,7 @@
 
     <string name="copy_file_to_zt">复制完成，复制在路径在:"~"</string>
 
-    <string name="not_file_msg">文件错误，不能复制到ZeroTermux应用中!</string>
+    <string name="not_file_msg">文件错误，不能复制到Zako应用中!</string>
 
     <string name="ttyd_install_msg">当前没有安装当前环境，请等待安装完成之后【再此点击此入口】!</string>
 
@@ -866,7 +866,7 @@
     <string name="attention_opening_ftp">正在打开FTP服务&#8230;</string>
     <string name="attention_closing_ftp">正在关闭FTP服务&#8230;</string>
     <string name="word_stop">停止</string>
-    <string name="ftp_title_no">ZeroTermux:FTP</string>
+    <string name="ftp_title_no">Zako:FTP</string>
     <string name="docker_check">Docker检查\n(ROOT)</string>
     <string name="termux_copy_ll">复制文件到~</string>
     <string name="termux_moudle_ll">安装模块包</string>
@@ -898,13 +898,13 @@
     <string name="beautification_function">美化/UI功能</string>
     <string name="online_features">线上功能</string>
     <string name="zt_features">ZT功能</string>
-    <string name="zt_settings">ZeroTermux设置</string>
+    <string name="zt_settings">Zako设置</string>
     <string name="zt_settings1">ZT设置</string>
-    <string name="zt_settings_note">ZeroTermux 相关设置选项</string>
+    <string name="zt_settings_note">Zako 相关设置选项</string>
     <string name="container_settings">容器设置</string>
     <string name="container_settings_note">应用容器内应用程序，只针对当前容器设置</string>
-    <string name="about_zerotermux">关于ZeroTermux</string>
-    <string name="about_zerotermux_note">版本信息、鸣谢、GITHUB</string>
+    <string name="about_Zako">关于Zako</string>
+    <string name="about_Zako_note">版本信息、鸣谢、GITHUB</string>
     <string name="termux_settings">Termux原生设置</string>
     <string name="termux_settings_note">进入Termux原生设置内容</string>
     <string name="install_termux_software">安装/还原Termux官方软件</string>
@@ -923,16 +923,16 @@
     <string name="bottom_keyboard_settings">设置键盘规则</string>
     <string name="bottom_keyboard_settings_note">输入个性化的键盘规则,提高输入效率</string>
     <string name="log_output">输出LOG到存储卡</string>
-    <string name="log_output_note">输出LOG文件到\n【/xinhao/ZeroTermuxLog/ZeroTermux.log】\n可能影响性能请谨慎开启!!!!</string>
-    <string name="zt_about">关于ZeroTermux</string>
-    <string name="zt_about_zerotermux">ZeroTermux GITHUB</string>
-    <string name="zt_about_zerotermux_note">跳转到ZeroTermux GITHUB页面</string>
-    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB(扩展引擎)</string>
-    <string name="zt_about_zerotermux_core_manage_note">跳转到ZeroTermux GITHUB页面\nZeroTermux的额外扩展引擎包</string>
-    <string name="zt_about_card_title">ZeroTermux</string>
-    <string name="zt_about_card_title_note">ZeroTermux 是基于Termux二次开发，增加了\n相对于Termux没有的的辅助功能，方便快速上手\n此软件可相当于一个微型linux系统,可额外安装\n其他发行版本如：Ubuntu、CentOs等</string>
+    <string name="log_output_note">输出LOG文件到\n【/xinhao/ZakoLog/Zako.log】\n可能影响性能请谨慎开启!!!!</string>
+    <string name="zt_about">关于Zako</string>
+    <string name="zt_about_Zako">Zako GITHUB</string>
+    <string name="zt_about_Zako_note">跳转到Zako GITHUB页面</string>
+    <string name="zt_about_Zako_core_manage">ZeroCoreManage GITHUB(扩展引擎)</string>
+    <string name="zt_about_Zako_core_manage_note">跳转到Zako GITHUB页面\nZako的额外扩展引擎包</string>
+    <string name="zt_about_card_title">Zako</string>
+    <string name="zt_about_card_title_note">Zako 是基于Termux二次开发，增加了\n相对于Termux没有的的辅助功能，方便快速上手\n此软件可相当于一个微型linux系统,可额外安装\n其他发行版本如：Ubuntu、CentOs等</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
-    <string name="zeroCore_about_card_title_note">ZeroCoreManage 是基于ZeroTermux的扩展包,对于\nZeroTermux功能的扩展,目的是为了减小ZeroTermux\n的软件包大小,不安装此扩展包ZeroTermux依旧可以正常运行\n引擎额外内容:\n\n1. 内置键盘\n2. WEB访问内存卡\n3. X86 Alpine</string>
+    <string name="zeroCore_about_card_title_note">ZeroCoreManage 是基于Zako的扩展包,对于\nZako功能的扩展,目的是为了减小Zako\n的软件包大小,不安装此扩展包Zako依旧可以正常运行\n引擎额外内容:\n\n1. 内置键盘\n2. WEB访问内存卡\n3. X86 Alpine</string>
     <string name="zt_developer">开发/贡献</string>
     <string name="zt_developer_note">Kevin Williams、狂吃不胖没办法、SharpIce 锐冰龙、WINLOG \nXINHAO_HAN 等(排名不分先后)</string>
     <string name="zt_install">还原/扩展官方版本</string>
@@ -940,7 +940,7 @@
     <string name="zt_install_file">没有安装此插件！请到【设置 -> 安装/还原Termux官方软件 -> (Zero)Utermux File Plug】安装插件</string>
     <string name="zt_volume_function_title">还原音量+-键</string>
     <string name="zt_volume_function_summary">禁用当前使用音量+-键进行弹出左/右面板</string>
-    <string name="zt_moe_remove">MOE目前作者已经不在维护，可能会出现ZeroTermux不可预知的错误结果。</string>
+    <string name="zt_moe_remove">MOE目前作者已经不在维护，可能会出现Zako不可预知的错误结果。</string>
 
 
     <string-array name="options_resolution_keys">
@@ -989,7 +989,7 @@
     <string name="zt_timer_log">日志目录</string>
     <string name="zt_timer_log_sum">LOG目录在:\n~/.timerdir/log/,请查看此处LOG运行情况.</string>
     <string name="zt_timer_edit">脚本目录</string>
-    <string name="zt_timer_edit_sum">请手动修改Termux目录下：\nZT环境下：~/.timerdir/termux_timer.sh\nSHELL环境下：~/.timerdir/shell_timer.sh\n注意！注意！注意\n在ZeroTermux 环境下请不要授予APP ROOT权限，否则无法运行!</string>
+    <string name="zt_timer_edit_sum">请手动修改Termux目录下：\nZT环境下：~/.timerdir/termux_timer.sh\nSHELL环境下：~/.timerdir/shell_timer.sh\n注意！注意！注意\n在Zako 环境下请不要授予APP ROOT权限，否则无法运行!</string>
 
     <string name="zt_timer_environment">当前运行环境</string>
     <string name="zt_timer_environment_sum">当前运行环境为:</string>

@@ -14,9 +14,9 @@
 
 <resources>
     <string name="application_name">&TERMUX_APP_NAME;</string>
-    <string name="shared_user_label">ZeroTermux user</string>
+    <string name="shared_user_label">Zako user</string>
 
-    <string name="app_name">ZeroTermux</string>
+    <string name="app_name">Zako</string>
 
     <!-- Termux RUN_COMMAND permission -->
     <string name="permission_run_command_label">Run commands in &TERMUX_APP_NAME; environment</string>
@@ -356,8 +356,8 @@ error</string>
     <string name="字体选择">Font selection</string>
     <string name="您一切选择的字体来源于互联网">All the fonts you choose come from the Internet</string>
     <string name="没有在内部存储">No font files were found in [internal storage/xinhao/font]</string>
-    <string name="Utermux默认字体">ZeroTermux Default font</string>
-    <string name="Utermux中文字体">ZeroTermux English Fonts</string>
+    <string name="Utermux默认字体">Zako Default font</string>
+    <string name="Utermux中文字体">Zako English Fonts</string>
     <string name="创建文件错误">Error creating file</string>
     <string name="字体设置成功">The font is set successfully</string>
     <string name="如果进入终端没有任何显示">If you enter the terminal without any display, it means that your font file is damaged, please reset the font</string>
@@ -399,12 +399,12 @@ error</string>
 
 
 
-       " ZeroTermux is a non-profit software developed based on Termux\n\nPart of the copyright belongs to ZeroTermux\n\nNo responsibility for any legal issues and risks, and no commercial purpose\n\n\n
+       " Zako is a non-profit software developed based on ZeroTermux\n\nPart of the copyright belongs to Zako\n\nNo responsibility for any legal issues and risks, and no commercial purpose\n\n\n
         Do not use for illegal purposes! \n
         \n
         Please abide by the law and be a good citizen,\n
         \n
-        The original intention of ZeroTermux is to let you enter the linux world faster, contribute a spirit to the construction of society in the future, and make a contribution\n
+        The original intention of Zako is to let you enter the linux world faster, contribute a spirit to the construction of society in the future, and make a contribution\n
         \n
 
         After a certain level of use, it is strongly recommended that you transition to the official termux [start using after getting started] (recommended),\n
@@ -418,40 +418,40 @@ error</string>
         \n
         Please turn off the sd card authorization to execute the [Delete] function\n
         \n
-        If your operation (not limited to the [Delete Function] of [Switch System], here is all the functions of ZeroTermux), your SD card includes:\n
+        If your operation (not limited to the [Delete Function] of [Switch System], here is all the functions of Zako), your SD card includes:\n
         \n
         Photo\n
         Video\n
         Audio\n
-        As well as all other data, you (the personal user of ZeroTermux (ZT)) are responsible for yourself\n
+        As well as all other data, you (the personal user of Zako (ZT)) are responsible for yourself\n
         \n
 
 
-       The download source of the public warehouse is uncontrollable and is not under the control of ZeroTermux. It all comes from a third-party warehouse. ZeroTermux and the author will not be responsible for everything from the third-party warehouse!\n
+       The download source of the public warehouse is uncontrollable and is not under the control of Zako. It all comes from a third-party warehouse. Zako and the author will not be responsible for everything from the third-party warehouse!\n
 \n
         \n
-        If the third-party warehouse has all illegal activities/documents, the author who provides the third-party warehouse bears any legal responsibility! ZeroTermux and the author do not bear any legal/other responsibilities!
+        If the third-party warehouse has all illegal activities/documents, the author who provides the third-party warehouse bears any legal responsibility! Zako and the author do not bear any legal/other responsibilities!
 
         \n
         \n
         License:\n
         \n
 
-        All functions of ZeroTermux can only be used for personal learning and communication, not for commercial use! and illegal use!\n
+        All functions of Zako can only be used for personal learning and communication, not for commercial use! and illegal use!\n
         \n
-        All functions of ZeroTermux can only be used for personal learning and communication, not for commercial use! and illegal use!\n\n
-        All functions of ZeroTermux can only be used for personal learning and communication, not for commercial use! and illegal use!\n\n
+        All functions of Zako can only be used for personal learning and communication, not for commercial use! and illegal use!\n\n
+        All functions of Zako can only be used for personal learning and communication, not for commercial use! and illegal use!\n\n
 
-        1. This software (ZeroTermux) is open source software, you can freely distribute, copy, and change, but please follow the GPL agreement!\n\n
+        1. This software (Zako) is open source software, you can freely distribute, copy, and change, but please follow the GPL agreement!\n\n
         2. The software follows the GPL agreement (http://www.opensource.org/licenses/gpl-2.0.php)\n\n
-        3. All the functions of this software (ZeroTermux) are for learning and communication use, do not use commercially, such as accidental operations, intentional operations, unintentional operations, etc. of the user (users who use ZeroTermux) are borne by the user!\n
-        4. This software (ZeroTermux) is used for free learning and communication as in the first regulation. The icons and fonts involved in the software are all from the Internet. \n
-         4.1. The font is the Android default font. If you use other fonts, please users (users using ZeroTermux) bear all risks and legal responsibilities. \n
+        3. All the functions of this software (Zako) are for learning and communication use, do not use commercially, such as accidental operations, intentional operations, unintentional operations, etc. of the user (users who use Zako) are borne by the user!\n
+        4. This software (Zako) is used for free learning and communication as in the first regulation. The icons and fonts involved in the software are all from the Internet. \n
+         4.1. The font is the Android default font. If you use other fonts, please users (users using Zako) bear all risks and legal responsibilities. \n
          4.2. The icon is used as the public library of Alibaba ICO. The principle of using the icon is for learning and communication, not for commercial use. If there is any infringement, it will be deleted immediately. \n
-        5. The recovery packages, data packages, zip packages, etc. used in this software (ZeroTermux) are all at risk. All of them are from the Internet. Please use it at your discretion. If any irreparable loss is caused, the user shall bear the risk. . \n
-        6. All recovery packages, data packages,module packages, and zip packages ZeroTermux cannot control their content. If there is any infringement in the package, the author of this software does not bear any responsibility, and the creator of the recovery package, data package, and zip package shall bear the responsibility (tar.gz backup function law statement). \n
+        5. The recovery packages, data packages, zip packages, etc. used in this software (Zako) are all at risk. All of them are from the Internet. Please use it at your discretion. If any irreparable loss is caused, the user shall bear the risk. . \n
+        6. All recovery packages, data packages,module packages, and zip packages Zako cannot control their content. If there is any infringement in the package, the author of this software does not bear any responsibility, and the creator of the recovery package, data package, and zip package shall bear the responsibility (tar.gz backup function law statement). \n
         7. Thanks to all the authors of the functions applied to this project. \n
-        8.Using ZeroTermux will directly or indirectly damage your equipment. If there is any irreparable loss, the user shall bear the responsibility of the software and the author.\n"
+        8.Using Zako will directly or indirectly damage your equipment. If there is any irreparable loss, the user shall bear the responsibility of the software and the author.\n"
 
 
     </string>
@@ -480,7 +480,7 @@ error</string>
     <string name="本机IP">Local IP</string>
 
     <string name="Zero功能">Zero function</string>
-    <string name="ZeroTermux内置功能">ZeroTermux command area (long press to open author address)</string>
+    <string name="Zako内置功能">Zako command area (long press to open author address)</string>
     <string name="内置nginx">Nginx (built-in)</string>
     <string name="Nginx开关">Nginx switch</string>
     <string name="访问linux目录">Access linux directory</string>
@@ -500,7 +500,7 @@ error</string>
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">ExperimentalFunction</string>
-    <string name="ZeroTermux实验功能">ZeroTermux ExperimentalFunction</string>
+    <string name="Zako实验功能">Zako ExperimentalFunction</string>
     <string name="网络ADB">Network ADB(ROOT)</string>
     <string name="网络ADBNo">Network ADB (no ROOT)</string>
     <string name="没有找到本机的ROOT权限">The ROOT permission of the machine is not found. Do you want to force it to continue?</string>
@@ -640,9 +640,9 @@ Reset successfully</string>
     <string name="获取线上">Get online</string>
     <string name="线上脚本">Online script</string>
     <string name="本地脚本">Local script</string>
-    <string name="请双击命令窗口试试">ZeroTermux\nDouble-click the command window to open the shortcut bar\nDouble-click the far left (volume + button)\nRight (volume-button) to open the menu/session bar\nTwo-finger click to open the toolbox\nThe right menu opens the built-in file browser device</string>
+    <string name="请双击命令窗口试试">Zako\nDouble-click the command window to open the shortcut bar\nDouble-click the far left (volume + button)\nRight (volume-button) to open the menu/session bar\nTwo-finger click to open the toolbox\nThe right menu opens the built-in file browser device</string>
     <string name="Zero论坛">Zero BBS</string>
-    <string name="ZeroTermux论坛">ZeroTermux bbs</string>
+    <string name="Zako论坛">Zako bbs</string>
 
     <string name="在线脚本">Online script</string>
     <string name="在线脚本服务器名称">Server Name</string>
@@ -701,7 +701,7 @@ Reset successfully</string>
     <string name="font_name">fontName:</string>
     <string name="font_instance">fontInstance:</string>
     <string name="font_path">fontPath:</string>
-    <string name="instance_zero">ZeroTermux|ABCD</string>
+    <string name="instance_zero">Zako|ABCD</string>
 
     <string name="clipboard_text">Note: This clipboard will only record the content within the APP</string>
     <string name="clipboard_title">Clipboard Title:</string>
@@ -715,7 +715,7 @@ Reset successfully</string>
 
     <string name="image_size_error">file too large</string>
 
-    <string name="zero_eg_not_install">ZeroTermux Engine not install. Please download the engine at the download site</string>
+    <string name="zero_eg_not_install">Zako Engine not install. Please download the engine at the download site</string>
 
     <string name="install_environment">Install the required environment?</string>
 
@@ -735,15 +735,15 @@ Reset successfully</string>
 
     <string name="telegram_group">Telegram</string>
 
-    <string name="opne_in_zerotermux">Opne In Zerotermux</string>
+    <string name="opne_in_Zako">Opne In Zako</string>
 
-    <string name="move_file_to_zt">Copy File To ZeroTermux</string>
+    <string name="move_file_to_zt">Copy File To Zako</string>
 
     <string name="file_name_copy">FileMessage:{file}\n\nSize:{size}\n\nPath:{path}\n\nSuffix:{suffix}\n\ncopyPath:~</string>
 
     <string name="copy_file_to_zt">copy is complete, the copy is in the path:"~"</string>
 
-    <string name="not_file_msg">File error, cannot be copied into ZeroTermux application!</string>
+    <string name="not_file_msg">File error, cannot be copied into Zako application!</string>
 
     <string name="ttyd_install_msg">The current environment is not currently installed, please wait for the installation to complete [click this entry again]!</string>
 
@@ -870,7 +870,7 @@ Reset successfully</string>
     <string name="attention_opening_ftp">Opening FTP service&#8230;</string>
     <string name="attention_closing_ftp">Shutting down the FTP service&#8230;</string>
     <string name="word_stop">stop</string>
-    <string name="ftp_title_no">ZeroTermux:FTP</string>
+    <string name="ftp_title_no">Zako:FTP</string>
     <string name="docker_check">DockerCheck\n(ROOT)</string>
     <string name="termux_copy_ll">copy</string>
     <string name="termux_moudle_ll">install module</string>
@@ -899,13 +899,13 @@ Reset successfully</string>
     <string name="beautification_function">Beautification/UI function</string>
     <string name="online_features">online features</string>
     <string name="zt_features">ZT function</string>
-    <string name="zt_settings">ZeroTermux settings</string>
+    <string name="zt_settings">Zako settings</string>
     <string name="zt_settings1">ZT settings</string>
-    <string name="zt_settings_note">ZeroTermux Related settings options</string>
+    <string name="zt_settings_note">Zako Related settings options</string>
     <string name="container_settings">Container settings</string>
     <string name="container_settings_note">Applications within the application container are only set for the current container.</string>
-    <string name="about_zerotermux">About ZeroTermux</string>
-    <string name="about_zerotermux_note">Version information, acknowledgments, GITHUB</string>
+    <string name="about_Zako">About Zako</string>
+    <string name="about_Zako_note">Version information, acknowledgments, GITHUB</string>
     <string name="termux_settings">Termux native settings</string>
     <string name="termux_settings_note">Enter the Termux native settings content</string>
     <string name="install_termux_software">Install/restore Termux official software</string>
@@ -924,16 +924,16 @@ Reset successfully</string>
     <string name="bottom_keyboard_settings">Set keyboard rules</string>
     <string name="bottom_keyboard_settings_note">Enter personalized keyboard rules to improve input efficiency</string>
     <string name="log_output">Output LOG to memory card</string>
-    <string name="log_output_note">Output the LOG file to\n[/xinhao/ZeroTermuxLog/ZeroTermux.log]\nIt may affect performance, please enable it with caution!!!!</string>
-    <string name="zt_about">About ZeroTermux</string>
-    <string name="zt_about_zerotermux">ZeroTermux GITHUB</string>
-    <string name="zt_about_zerotermux_note">Jump to ZeroTermux GITHUB page</string>
-    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB (extension engine)</string>
-    <string name="zt_about_zerotermux_core_manage_note">Jump to ZeroTermux GITHUB page\nAdditional extension engine package for ZeroTermux</string>
-    <string name="zt_about_card_title">ZeroTermux</string>
-    <string name="zt_about_card_title_note">ZeroTermux is a secondary development based on Termux, adding\nauxiliary functions that are not available in Termux, making it easy to get started quickly\nThis software can be equivalent to a mini-linux system and can be additionally installed\nOther distributions such as: Ubuntu, CentOs, etc.</string>
+    <string name="log_output_note">Output the LOG file to\n[/xinhao/ZakoLog/Zako.log]\nIt may affect performance, please enable it with caution!!!!</string>
+    <string name="zt_about">About Zako</string>
+    <string name="zt_about_Zako">Zako GITHUB</string>
+    <string name="zt_about_Zako_note">Jump to Zako GITHUB page</string>
+    <string name="zt_about_Zako_core_manage">ZeroCoreManage GITHUB (extension engine)</string>
+    <string name="zt_about_Zako_core_manage_note">Jump to Zako GITHUB page\nAdditional extension engine package for Zako</string>
+    <string name="zt_about_card_title">Zako</string>
+    <string name="zt_about_card_title_note">Zako is a secondary development based on Termux, adding\nauxiliary functions that are not available in Termux, making it easy to get started quickly\nThis software can be equivalent to a mini-linux system and can be additionally installed\nOther distributions such as: Ubuntu, CentOs, etc.</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
-    <string name="zeroCore_about_card_title_note">ZeroCoreManage is an expansion pack based on ZeroTermux. The purpose of extending the ZeroTermux function is to reduce the size of the ZeroTermux software package. ZeroTermux can still run normally without installing this expansion pack. Extra engine content:\n\n1. Built-in Keyboard\n2. WEB access memory card\n3. X86 Alpine</string>
+    <string name="zeroCore_about_card_title_note">ZeroCoreManage is an expansion pack based on Zako. The purpose of extending the Zako function is to reduce the size of the Zako software package. Zako can still run normally without installing this expansion pack. Extra engine content:\n\n1. Built-in Keyboard\n2. WEB access memory card\n3. X86 Alpine</string>
     <string name="zt_developer">Development/Contribution</string>
     <string name="zt_developer_note">Kevin Williams、狂吃不胖没办法、SharpIce 锐冰龙、WINLOG \nXINHAO_HAN etc (in no particular order)</string>
     <string name="zt_install">Restore/expand official version</string>
@@ -941,7 +941,7 @@ Reset successfully</string>
     <string name="zt_install_file">This plugin is not installed! Please go to [Settings -> Install/Restore Termux official software -> (Zero)Utermux File Plug] to install the plug-in</string>
     <string name="zt_volume_function_title">Restore volume +- keys</string>
     <string name="zt_volume_function_summary">Disable the current use of volume +- keys to pop up the left/right panel</string>
-    <string name="zt_moe_remove">MOE is no longer maintained by the author, and unpredictable errors may occur in ZeroTermux.</string>
+    <string name="zt_moe_remove">MOE is no longer maintained by the author, and unpredictable errors may occur in Zako.</string>
 
     <string-array name="options_resolution_keys">
         <item>1920x1080</item>
@@ -991,7 +991,7 @@ Reset successfully</string>
     <string name="zt_timer_log">Log directory</string>
     <string name="zt_timer_log_sum">The LOG directory is:\n~/.timerdir/log/, please check the LOG operation status here.</string>
     <string name="zt_timer_edit">script directory</string>
-    <string name="zt_timer_edit_sum">Please manually modify the Termux directory:\nZT environment: ~/.timerdir/termux_timer.sh\nSHELL environment: ~/.timerdir/shell_timer.sh\nAttention! Notice! Note\nPlease do not grant ROOT permission to APP in ZeroTermux environment, otherwise it will not run!</string>
+    <string name="zt_timer_edit_sum">Please manually modify the Termux directory:\nZT environment: ~/.timerdir/termux_timer.sh\nSHELL environment: ~/.timerdir/shell_timer.sh\nAttention! Notice! Note\nPlease do not grant ROOT permission to APP in Zako environment, otherwise it will not run!</string>
 
     <string name="zt_timer_environment">Current operating environment</string>
     <string name="zt_timer_environment_sum">The current operating environment is:</string>
