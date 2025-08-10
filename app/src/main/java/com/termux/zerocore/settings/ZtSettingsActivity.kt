@@ -20,9 +20,6 @@ class ZtSettingsActivity : AppCompatActivity() {
         findViewById<CardView>(R.id.zt_about_card_view).setOnClickListener {
             startActivity(Intent(this, ZTAboutActivity::class.java))
         }
-        findViewById<CardView>(R.id.install_card_view).setOnClickListener {
-            startActivity(Intent(this, ZTInstallActivity::class.java))
-        }
 
     }
 }
