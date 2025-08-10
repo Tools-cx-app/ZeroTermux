@@ -1691,7 +1691,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout x11_hide_terminal;
     private LinearLayout x11_environment;
     private LinearLayout x11_so_install;
-    private LinearLayout install_x11_apk;
     private LinearLayout x11_keyboard_visible;
     private LinearLayout x11_keyboard_gone;
 
@@ -1763,7 +1762,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
         x11_features_settings = findViewById(R.id.x11_features_settings);
         x11_environment = findViewById(R.id.x11_environment);
-        install_x11_apk = findViewById(R.id.install_x11_apk);
         x11_so_install = findViewById(R.id.x11_so_install);
         x11_display_terminal = findViewById(R.id.x11_display_terminal);
         x11_hide_terminal = findViewById(R.id.x11_hide_terminal);
@@ -1779,7 +1777,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         x11_keyboard_gone.setOnClickListener(this);
         x11_so_install.setOnClickListener(this);
         x11_environment.setOnClickListener(this);
-        install_x11_apk.setOnClickListener(this);
         x11_features_settings.setOnClickListener(this);
         x11_display_terminal.setOnClickListener(this);
         x11_hide_terminal.setOnClickListener(this);
