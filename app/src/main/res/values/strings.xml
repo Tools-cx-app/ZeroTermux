@@ -462,7 +462,7 @@
     <string name="本机IP">本机IP</string>
 
     <string name="Zero功能">Zero功能</string>
-    <string name="Zako内置功能">Zako 脚本区域(长按打开作者地址)</string>
+    <string name="ZeroTermux内置功能">Zako 脚本区域(长按打开作者地址)</string>
     <string name="内置nginx">Nginx(内置)</string>
     <string name="Nginx开关">Nginx开关</string>
     <string name="访问linux目录">访问linux目录</string>
@@ -482,7 +482,7 @@
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">实验功能</string>
-    <string name="Zako实验功能">Zako 实验功能</string>
+    <string name="ZeroTermux实验功能">Zako 实验功能</string>
     <string name="网络ADB">网络ADB(ROOT)</string>
     <string name="网络ADBNo">网络ADB(无ROOT)</string>
     <string name="没有找到本机的ROOT权限">没有找到本机的ROOT权限,是否强制继续?</string>
@@ -878,8 +878,8 @@
     <string name="zt_settings_note">Zako 相关设置选项</string>
     <string name="container_settings">容器设置</string>
     <string name="container_settings_note">应用容器内应用程序，只针对当前容器设置</string>
-    <string name="about_Zako">关于Zako</string>
-    <string name="about_Zako_note">版本信息、鸣谢、GITHUB</string>
+    <string name="about_zerotermux">关于Zako</string>
+    <string name="about_zerotermux_note">版本信息、鸣谢、GITHUB</string>
     <string name="termux_settings">Termux原生设置</string>
     <string name="termux_settings_note">进入Termux原生设置内容</string>
     <string name="install_termux_software">安装/还原Termux官方软件</string>
@@ -900,10 +900,10 @@
     <string name="log_output">输出LOG到存储卡</string>
     <string name="log_output_note">输出LOG文件到\n【/xinhao/ZakoLog/Zako.log】\n可能影响性能请谨慎开启!!!!</string>
     <string name="zt_about">关于Zako</string>
-    <string name="zt_about_Zako">Zako GITHUB</string>
-    <string name="zt_about_Zako_note">跳转到Zako GITHUB页面</string>
-    <string name="zt_about_Zako_core_manage">ZeroCoreManage GITHUB(扩展引擎)</string>
-    <string name="zt_about_Zako_core_manage_note">跳转到Zako GITHUB页面\nZako的额外扩展引擎包</string>
+    <string name="zt_about_zerotermux">Zako GITHUB</string>
+    <string name="zt_about_zerotermux_note">跳转到Zako GITHUB页面</string>
+    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB(扩展引擎)</string>
+    <string name="zt_about_zerotermux_core_manage_note">跳转到Zako GITHUB页面\nZako的额外扩展引擎包</string>
     <string name="zt_about_card_title">Zako</string>
     <string name="zt_about_card_title_note">Zako 是基于Termux二次开发，增加了\n相对于Termux没有的的辅助功能，方便快速上手\n此软件可相当于一个微型linux系统,可额外安装\n其他发行版本如：Ubuntu、CentOs等</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
