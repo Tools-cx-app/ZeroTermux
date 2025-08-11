@@ -715,7 +715,7 @@
 
     <string name="telegram_group">Telegram</string>
 
-    <string name="opne_in_Zako">使用Zako打开</string>
+    <string name="opne_in_zerotermux">使用Zako打开</string>
 
     <string name="move_file_to_zt">移动文件到Zero Termux</string>
 
