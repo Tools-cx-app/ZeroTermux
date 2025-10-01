@@ -480,7 +480,7 @@ error</string>
     <string name="本机IP">Local IP</string>
 
     <string name="Zero功能">Zero function</string>
-    <string name="ZeroTermux内置功能">Zako command area (long press to open author address)</string>
+    <string name="Zako内置功能">Zako command area (long press to open author address)</string>
     <string name="内置nginx">Nginx (built-in)</string>
     <string name="Nginx开关">Nginx switch</string>
     <string name="访问linux目录">Access linux directory</string>
@@ -500,7 +500,7 @@ error</string>
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">ExperimentalFunction</string>
-    <string name="ZeroTermux实验功能">Zako ExperimentalFunction</string>
+    <string name="Zako实验功能">Zako ExperimentalFunction</string>
     <string name="网络ADB">Network ADB(ROOT)</string>
     <string name="网络ADBNo">Network ADB (no ROOT)</string>
     <string name="没有找到本机的ROOT权限">The ROOT permission of the machine is not found. Do you want to force it to continue?</string>
@@ -904,8 +904,8 @@ Reset successfully</string>
     <string name="zt_settings_note">Zako Related settings options</string>
     <string name="container_settings">Container settings</string>
     <string name="container_settings_note">Applications within the application container are only set for the current container.</string>
-    <string name="about_zerotermux">About Zako</string>
-    <string name="about_zerotermux_note">Version information, acknowledgments, GITHUB</string>
+    <string name="about_Zako">About Zako</string>
+    <string name="about_Zako_note">Version information, acknowledgments, GITHUB</string>
     <string name="termux_settings">Termux native settings</string>
     <string name="termux_settings_note">Enter the Termux native settings content</string>
     <string name="install_termux_software">Install/restore Termux official software</string>
@@ -926,10 +926,10 @@ Reset successfully</string>
     <string name="log_output">Output LOG to memory card</string>
     <string name="log_output_note">Output the LOG file to\n[/xinhao/ZakoLog/Zako.log]\nIt may affect performance, please enable it with caution!!!!</string>
     <string name="zt_about">About Zako</string>
-    <string name="zt_about_zerotermux">Zako GITHUB</string>
-    <string name="zt_about_zerotermux_note">Jump to Zako GITHUB page</string>
-    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB (extension engine)</string>
-    <string name="zt_about_zerotermux_core_manage_note">Jump to Zako GITHUB page\nAdditional extension engine package for Zako</string>
+    <string name="zt_about_Zako">Zako GITHUB</string>
+    <string name="zt_about_Zako_note">Jump to Zako GITHUB page</string>
+    <string name="zt_about_Zako_core_manage">ZeroCoreManage GITHUB (extension engine)</string>
+    <string name="zt_about_Zako_core_manage_note">Jump to Zako GITHUB page\nAdditional extension engine package for Zako</string>
     <string name="zt_about_card_title">Zako</string>
     <string name="zt_about_card_title_note">Zako is a secondary development based on Termux, adding\nauxiliary functions that are not available in Termux, making it easy to get started quickly\nThis software can be equivalent to a mini-linux system and can be additionally installed\nOther distributions such as: Ubuntu, CentOs, etc.</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
