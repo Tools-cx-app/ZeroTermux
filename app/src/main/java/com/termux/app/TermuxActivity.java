@@ -1629,7 +1629,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private CardView main_card;
     private CardView ip_card;
     private ImageView open_image;
-    private CardView info_card;
     private LinearLayout rongqi;
     private LinearLayout back_res;
     private LinearLayout msg;
@@ -1647,10 +1646,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout key_bord;
     private TextView service_status;
     private TextView service_eg;
-    private TextView msg_tv;
     private TextView ip_status;
-    private TextView qq_group_tv;
-    private TextView telegram_group_tv;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
     private View back_color;
@@ -1674,11 +1670,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         main_card = findViewById(R.id.main_card);
         ip_card = findViewById(R.id.ip_card);
         open_image = findViewById(R.id.open_image);
-        info_card = findViewById(R.id.info_card);
         frame_file = findViewById(R.id.frame_file);
         session_rl = findViewById(R.id.session_rl);
-        telegram_group_tv = findViewById(R.id.telegram_group_tv);
-        qq_group_tv = findViewById(R.id.qq_group_tv);
         rongqi = findViewById(R.id.rongqi);
         layout_menu = findViewById(R.id.layout_menu);
         back_res = findViewById(R.id.back_res);
@@ -1693,7 +1686,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         service_status = findViewById(R.id.service_status);
         service_eg = findViewById(R.id.service_eg);
         vnc_start = findViewById(R.id.vnc_start);
-        msg_tv = findViewById(R.id.msg_tv);
         xue_fragment = findViewById(R.id.xue_fragment);
         firework_view = findViewById(R.id.firework_view);
         timer = findViewById(R.id.timer);
@@ -1710,8 +1702,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         rongqi.setOnClickListener(this);
         back_res.setOnClickListener(this);
         msg.setOnClickListener(this);
-        telegram_group_tv.setOnClickListener(this);
-        qq_group_tv.setOnClickListener(this);
         files_mulu.setOnClickListener(this);
         github.setOnClickListener(this);
         start_command.setOnClickListener(this);
@@ -1729,25 +1719,12 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             protocolDialog.show();
             protocolDialog.setCancelable(false);
         }
-        getServiceVs();
         refStartCommandStat();
         main_card.setOnClickListener(
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
         findViewById(R.id.settings).setOnClickListener(
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
 
-        ip_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (info_card.getVisibility() == View.GONE) {
-                    info_card.setVisibility(View.VISIBLE);
-                    open_image.setRotation(180);
-                } else {
-                    info_card.setVisibility(View.GONE);
-                    open_image.setRotation(0);
-                }
-            }
-        });
         setEgInstallStatus();
     }
 
@@ -1958,15 +1935,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
                 break;
 
-            case R.id.qq_group_tv:
-                UUtils.copyToClip("878847174");
-                break;
-            case R.id.telegram_group_tv:
-                Intent intent1 = new Intent();
-                intent1.setData(Uri.parse("https://t.me/ztcommunity"));
-                intent1.setAction(Intent.ACTION_VIEW);
-                this.startActivity(intent1);
-                break;
             case R.id.timer:
                 startActivity(new Intent(this, TimerActivity.class));
                 break;
@@ -2876,56 +2844,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                     }
                 }
             });
-
-
-    }
-
-
-    /**
-     * 连接服务器获取版本
-     */
-
-    private void getServiceVs() {
-
-        ip_status.setText(UUtils.getHostIP());
-        new BaseHttpUtils().getUrl(HTTPIP.IP + "/repository/main.json", new HttpResponseListenerBase() {
-            @Override
-            public void onSuccessful(@NotNull Message msg, int mWhat) {
-
-              //  UUtils.showLog("连接成功:" + msg.obj);
-                LogUtils.d(TAG, "getServiceVs onSuccessful connection succeeded");
-
-                try {
-                    ZDYDataBean zdyDataBean = new Gson().fromJson((String) msg.obj, ZDYDataBean.class);
-
-                    service_status.setText(zdyDataBean.getVersionName());
-                    service_eg.setText(zdyDataBean.getEngineName());
-
-                    if (zdyDataBean.getMsg() == null || zdyDataBean.getMsg().isEmpty()) {
-
-                    } else {
-                        msg_tv.setText(zdyDataBean.getMsg());
-                    }
-
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    // UUtils.showMsg(UUtils.getString(R.string.服务器数据格式不正确));
-                    service_status.setText(UUtils.getString(R.string.未连接));
-                    LogUtils.d(TAG, "getServiceVs connection error:" + e.toString());
-                }
-
-            }
-
-            @Override
-            public void onFailure(@org.jetbrains.annotations.Nullable Response<String> response, @NotNull String msg, int mWhat) {
-
-                // UUtils.showMsg(UUtils.getString(R.string.无法连接到下载站服务器));
-                service_status.setText(UUtils.getString(R.string.未连接));
-                service_eg.setText(UUtils.getString(R.string.未连接));
-                LogUtils.d(TAG, "getServiceVs data error:" + response.getException());
-            }
-        }, new HashMap<>(), 5555);
 
 
     }
