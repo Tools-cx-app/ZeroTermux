@@ -1627,7 +1627,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private ScrollView scrollView_main;
     private LinearLayout file_layout;
     private CardView main_card;
-    private ImageView open_image;
     private LinearLayout rongqi;
     private LinearLayout back_res;
     private LinearLayout msg;
@@ -1663,7 +1662,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         scrollView_main = findViewById(R.id.scrollView_main);
         file_layout = findViewById(R.id.file_layout);
         main_card = findViewById(R.id.main_card);
-        open_image = findViewById(R.id.open_image);
         frame_file = findViewById(R.id.frame_file);
         session_rl = findViewById(R.id.session_rl);
         rongqi = findViewById(R.id.rongqi);
