@@ -6,15 +6,14 @@ apply plugin: 'kotlin-android'
 
 
 android {
-    compileSdk = 34
+    compileSdkVersion project.properties.compileSdkVersion.toInteger()
     ndkVersion '27.0.12077973'
 
     buildFeatures {
         viewBinding true
     }
-    lint {
+    lintOptions {
         checkReleaseBuilds false
-        disable 'ProtectedPermissions'
     }
     tasks.withType(JavaCompile) {
         options.fork = true
@@ -139,10 +138,10 @@ android {
 
     defaultConfig {
         applicationId "com.termux"
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 117
-        versionName = "0.118.3.49"
+        minSdkVersion project.properties.minSdkVersion.toInteger()
+        targetSdkVersion project.properties.targetSdkVersion.toInteger()
+        versionCode 117
+        versionName "0.118.3.49"
 
         manifestPlaceholders.TERMUX_PACKAGE_NAME = "com.termux"
         manifestPlaceholders.TERMUX_APP_NAME = "Termux"
@@ -168,7 +167,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                
+                includeCompileClasspath true
             }
         }
 
@@ -178,14 +177,14 @@ android {
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.release
+            signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile(('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug {
-            signingConfig = signingConfigs.debug
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -200,7 +199,7 @@ android {
         }
     }
 
-    lint {
+    lintOptions {
         disable 'ProtectedPermissions'
     }
 
@@ -235,9 +234,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-task versionName = "0.118.3.49"
+task versionName {
     doLast {
-        print android.defaultConfig.versionName = "0.118.3.49"
+        print android.defaultConfig.versionName
     }
 }
 
