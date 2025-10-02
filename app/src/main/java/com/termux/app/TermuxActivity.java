@@ -1712,6 +1712,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
         findViewById(R.id.settings).setOnClickListener(
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
+        
+        version.setText(UUtils.getString(R.string.版本) + " : " + UUtils2.INSTANCE.getVersionName(UUtils.getContext()));
     }
 
 
