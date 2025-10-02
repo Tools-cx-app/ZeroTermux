@@ -758,15 +758,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 		// @}
     }
 
-    private void setSummaryVisible() {
-        String change_text_show = SaveData.INSTANCE.getStringOther("change_text_show");
-        if ((change_text_show == null || change_text_show.isEmpty() || change_text_show.equals("def"))) {
-            double_tishi.setVisibility(View.VISIBLE);
-        } else {
-            double_tishi.setVisibility(View.GONE);
-        }
-    }
-
     @Override
     public void onStart() {
         super.onStart();
@@ -1667,7 +1658,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private TextView ip_status;
     private TextView qq_group_tv;
     private TextView telegram_group_tv;
-    private TextView double_tishi;
     private TextView xue_hua_start;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
@@ -1727,19 +1717,11 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         ip_status = findViewById(R.id.ip_status);
         zero_fun = findViewById(R.id.zero_fun);
         shiyan_fun = findViewById(R.id.shiyan_fun);
-        double_tishi = findViewById(R.id.double_tishi);
         beautify = findViewById(R.id.beautify);
         back_color = mTermuxActivityRootView.getBack_color();
         back_img = mTermuxActivityRootView.getBack_img();
         back_video = mTermuxActivityRootView.getBack_video();
         mMainActivity = mTermuxActivityRootView.getMainActivity();
-
-        try {
-            double_tishi.setText(double_tishi.getText() + "\n" + TermuxInstaller.determineTermuxArchName().toUpperCase());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         code_ll.setOnClickListener(this);
         rongqi.setOnClickListener(this);
@@ -1840,9 +1822,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             Log.i(TAG, "initStatuexxxxxxxx ztUserBeanShow.isShowCommand(): " + ztUserBeanShow.isShowCommand());
             mTerminalView.setVisibility(ztUserBeanShow.isShowCommand() ? View.VISIBLE : View.INVISIBLE);
             back_color.setVisibility(ztUserBeanShow.isShowCommand() ? View.VISIBLE : View.INVISIBLE);
-            if (!ztUserBeanShow.isShowCommand()) {
-                double_tishi.setVisibility(View.GONE);
-            }
 
             mHandler.sendEmptyMessageDelayed(0, 1000);
         }
@@ -2128,17 +2107,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                             back_color.setAlpha(0.3f);
                         } else {
                             back_color.setAlpha(1f);
-                        }
-                    }
-                });
-                mBeautifySettingDialog.setOnTextCheckedChangeListener(new BeautifySettingDialog.OnTextCheckedChangeListener() {
-                    @Override
-                    public void onChange(boolean change) {
-                        Logger.logDebug(LOG_TAG, "setOnTextCheckedChangeListener:" + change);
-                        if (change) {
-                            double_tishi.setVisibility(View.VISIBLE);
-                        } else {
-                            double_tishi.setVisibility(View.GONE);
                         }
                     }
                 });
