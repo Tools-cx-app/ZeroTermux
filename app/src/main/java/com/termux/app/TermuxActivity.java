@@ -1639,13 +1639,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private TextView text_start;
     private LinearLayout github;
     private LinearLayout start_command;
-    private LinearLayout xuanfu;
-    private LinearLayout ziti;
     private LinearLayout vnc_start;
-    private LinearLayout xue_hua;
-    private LinearLayout rain_back;
-    private LinearLayout video_back_menu;
-    private LinearLayout quanping;
     private LinearLayout zero_fun;
     private LinearLayout yuyan;
     private LinearLayout timer;
@@ -1657,10 +1651,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private TextView ip_status;
     private TextView qq_group_tv;
     private TextView telegram_group_tv;
-    private TextView xue_hua_start;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
-    private LinearLayout beautify;
     private View back_color;
     private View layout_menu;
     private ImageView back_img;
@@ -1697,8 +1689,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         github = findViewById(R.id.github);
         start_command = findViewById(R.id.start_command);
         text_start = findViewById(R.id.text_start);
-        xuanfu = findViewById(R.id.xuanfu);
-        ziti = findViewById(R.id.ziti);
         key_bord = findViewById(R.id.key_bord);
         service_status = findViewById(R.id.service_status);
         service_eg = findViewById(R.id.service_eg);
@@ -1706,17 +1696,11 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         msg_tv = findViewById(R.id.msg_tv);
         xue_fragment = findViewById(R.id.xue_fragment);
         firework_view = findViewById(R.id.firework_view);
-        xue_hua = findViewById(R.id.xue_hua);
-        rain_back = findViewById(R.id.rain_back);
-        video_back_menu = findViewById(R.id.video_back_menu);
-        xue_hua_start = findViewById(R.id.xue_hua_start);
         timer = findViewById(R.id.timer);
-        quanping = findViewById(R.id.quanping);
         yuyan = findViewById(R.id.yuyan);
         ip_status = findViewById(R.id.ip_status);
         zero_fun = findViewById(R.id.zero_fun);
         shiyan_fun = findViewById(R.id.shiyan_fun);
-        beautify = findViewById(R.id.beautify);
         back_color = mTermuxActivityRootView.getBack_color();
         back_img = mTermuxActivityRootView.getBack_img();
         back_video = mTermuxActivityRootView.getBack_video();
@@ -1731,16 +1715,9 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         files_mulu.setOnClickListener(this);
         github.setOnClickListener(this);
         start_command.setOnClickListener(this);
-        xuanfu.setOnClickListener(this);
-        ziti.setOnClickListener(this);
         vnc_start.setOnClickListener(this);
-        xue_hua.setOnClickListener(this);
-        rain_back.setOnClickListener(this);
-        video_back_menu.setOnClickListener(this);
-        quanping.setOnClickListener(this);
         zero_fun.setOnClickListener(this);
         yuyan.setOnClickListener(this);
-        beautify.setOnClickListener(this);
         shiyan_fun.setOnClickListener(this);
         timer.setOnClickListener(this);
         mTerminalView.setOnFocusChangeListener(this);
@@ -1790,16 +1767,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
      */
 
     private void initStatue() {
-        boolean snowflakeShow = UserSetManage.Companion.get().getZTUserBean().isSnowflakeShow();
-        if (!snowflakeShow) {
-            xue_hua_start.setText(UUtils.getString(R.string.雪花关));
-            xue_fragment.removeAllViews();
-        } else {
-            xue_hua_start.setText(UUtils.getString(R.string.雪花开));
-            SnowView snowView = new SnowView(TermuxActivity.this);
-            xue_fragment.removeAllViews();
-            xue_fragment.addView(snowView);
-        }
         ZTUserBean ztRainUserBean = UserSetManage.Companion.get().getZTUserBean();
         xue_fragment.removeAllViews();
         if (ztRainUserBean.isRainShow()) {
@@ -1959,73 +1926,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 refStartCommandStat();
 
                 break;
-            case R.id.xuanfu:
-                try {
-                    Intent intent1 = new Intent();
-                    intent1.setAction("com.zero_float.action.ENTER");
-                    startActivity(intent1);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                   UUtils.showMsg(UUtils.getString(R.string.zt_install_float));
-                }
-                break;
-
-            case R.id.ziti:
-                startActivity(new Intent(this, FontActivity.class));
-                break;
-
-            case R.id.xue_hua:
-                ZTUserBean ztUserBean = UserSetManage.Companion.get().getZTUserBean();
-                ztUserBean.setRainShow(false);
-                firework_view.setVisibility(View.GONE);
-                if (!ztUserBean.isSnowflakeShow()) {
-                    xue_hua_start.setText(UUtils.getString(R.string.雪花开));
-                    SnowView snowView = new SnowView(TermuxActivity.this);
-                    xue_fragment.removeAllViews();
-                    xue_fragment.addView(snowView);
-                    ztUserBean.setSnowflakeShow(true);
-                    UserSetManage.Companion.get().setZTUserBean(ztUserBean);
-                } else {
-                    xue_hua_start.setText(UUtils.getString(R.string.雪花关));
-                    xue_fragment.removeAllViews();
-                    ztUserBean.setSnowflakeShow(false);
-                    UserSetManage.Companion.get().setZTUserBean(ztUserBean);
-                }
-                break;
-
-            case R.id.video_back_menu:
-                getDrawer().smoothClose();
-                openToolDialog(false, 1,
-                    CommonCommandsDialog.CommonCommandsDialogConstant.VIDEO_KEY);
-                break;
-            case R.id.rain_back:
-                ZTUserBean ztRainUserBean = UserSetManage.Companion.get().getZTUserBean();
-                ztRainUserBean.setSnowflakeShow(false);
-                xue_fragment.removeAllViews();
-                if (!ztRainUserBean.isRainShow()) {
-                    firework_view.setVisibility(View.VISIBLE);
-                    ztRainUserBean.setRainShow(true);
-                    UserSetManage.Companion.get().setZTUserBean(ztRainUserBean);
-                } else {
-                    firework_view.setVisibility(View.GONE);
-                    ztRainUserBean.setRainShow(false);
-                    UserSetManage.Companion.get().setZTUserBean(ztRainUserBean);
-                }
-                break;
-            //全屏 WindowUtils
-            case R.id.quanping:
-                if (quanping.getTag() == null) {
-                    WindowUtils.setFullScreen(this);
-                    quanping.setTag("fff");
-                    //mExtraKeysView.setVisibility(View.GONE);
-                    setExtraKeysViewVisible(false);
-                } else {
-                    WindowUtils.exitFullScreen(this);
-                    quanping.setTag(null);
-                    //mExtraKeysView.setVisibility(View.VISIBLE);
-                    setExtraKeysViewVisible(true);
-                }
-                break;
 
             case R.id.yuyan:
 
@@ -2070,75 +1970,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             case R.id.timer:
                 startActivity(new Intent(this, TimerActivity.class));
                 break;
-            case R.id.beautify:
-                if (UserSetManage.Companion.get().getZTUserBean().isStyleTriggerOff()) {
-                    getDrawer().smoothClose();
-                    com.zp.z_file.util.LogUtils.e(TAG, "onClick beautify Drawer is Close.");
-                }
-                BeautifySettingDialog mBeautifySettingDialog = new BeautifySettingDialog(this);
-
-                mBeautifySettingDialog.setBackColorChange(new BeautifySettingDialog.BackColorChange() {
-                    @Override
-                    public void onColorChange(int color) {
-                        back_color.setBackgroundColor(color);
-                    }
-
-                    @Override
-                    public void onColorApChange(int ap) {
-
-                    }
-                });
-
-                mBeautifySettingDialog.setOnChangeImageFile(new BeautifySettingDialog.OnChangeImageFile() {
-                    @Override
-                    public void onChangImage(@NotNull File mFile) {
-                        back_video.setVisibility(View.GONE);
-                        back_img.setVisibility(View.VISIBLE);
-                        Glide.with(TermuxActivity.this).load(mFile).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(back_img);
-                    }
-                });
-
-                mBeautifySettingDialog.setOnChangeTextView(new BeautifySettingDialog.OnChangeTextView() {
-                    @Override
-                    public void onChange(boolean change) {
-                        Logger.logDebug(LOG_TAG, "change:" + change);
-                        if (change) {
-                            back_color.setAlpha(0.3f);
-                        } else {
-                            back_color.setAlpha(1f);
-                        }
-                    }
-                });
-                mBeautifySettingDialog.setFontColorChange(new BeautifySettingDialog.FontColorChange() {
-                    @Override
-                    public void onColorChange(int color) {
-                        TerminalRenderer.COLOR_TEXT = color;
-                        ExtraKeysView.DEFAULT_BUTTON_TEXT_COLOR = color;
-                        mTerminalView.invalidate();
-                        UUtils.showLog("Test:22222");
-                        if (mExtraKeysView != null) {
-                            mExtraKeysView.setColorButton();
-                            mExtraKeysView.invalidate();
-                        }
-                    }
-
-                    @Override
-                    public void onColorApChange(int color) {
-                        TerminalRenderer.COLOR_TEXT = color;
-                        ExtraKeysView.DEFAULT_BUTTON_TEXT_COLOR = color;
-                        mTerminalView.invalidate();
-                        UUtils.showLog("Test:333333");
-                        if (mExtraKeysView != null) {
-                            mExtraKeysView.setColorButton();
-                            mExtraKeysView.invalidate();
-                        }
-
-                    }
-                });
-                mBeautifySettingDialog.show();
-                mBeautifySettingDialog.setCancelable(true);
-                break;
-
 
         }
 
