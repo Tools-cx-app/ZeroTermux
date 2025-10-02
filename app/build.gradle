@@ -55,21 +55,21 @@ android {
 
 
     dependencies {
-        def libsuVersion = '6.0.0'
+        def libsuVersion = '5.2.1'
         implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
-        implementation "androidx.annotation:annotation:1.9.1"
-        implementation "androidx.core:core:1.17.0"
-        implementation "androidx.drawerlayout:drawerlayout:1.2.0"
-        implementation "androidx.preference:preference:1.2.1"
-        implementation "androidx.viewpager:viewpager:1.1.0"
-        implementation "com.google.guava:guava:33.5.0-jre"
-        implementation 'com.google.code.gson:gson:2.13.2'
+        implementation "androidx.annotation:annotation:1.2.0"
+        implementation "androidx.core:core:1.9.0-alpha05"
+        implementation "androidx.drawerlayout:drawerlayout:1.1.1"
+        implementation "androidx.preference:preference:1.1.1"
+        implementation "androidx.viewpager:viewpager:1.0.0"
+        implementation "com.google.guava:guava:31.0.1-jre"
+        implementation 'com.google.code.gson:gson:2.8.6'
         //网络框架
         implementation 'com.lzy.net:okgo:3.0.4'
         //switch Btn
         implementation 'com.github.iielse:switchbutton:1.0.4'
 
-        implementation 'com.github.getActivity:XXPermissions:26.5'
+        implementation 'com.github.getActivity:XXPermissions:11.5'
         implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
 
         implementation 'me.laoyuyu.aria:core:3.8.16'
@@ -82,9 +82,9 @@ android {
         // Optional: Provides remote file system support
         implementation "com.github.topjohnwu.libsu:nio:${libsuVersion}"
         // debugImplementation 'com.github.getActivity:Logcat:9.6'
-        implementation 'com.scottyab:rootbeer-lib:0.1.1'
+        implementation 'com.scottyab:rootbeer-lib:0.1.0'
         //OTG0
-        implementation 'me.jahnen:libaums:0.9.0'
+        implementation 'me.jahnen:libaums:0.8.0'
         implementation 'me.jahnen:libaums-httpserver:0.5.3'
         implementation 'me.jahnen:libaums-storageprovider:0.5.1'
         implementation  'uk.co.alt236:usbdeviceenumerator:2.0.0'
@@ -92,7 +92,7 @@ android {
         implementation 'com.just.agentweb:agentweb:4.0.2'
         implementation 'com.just.agentweb:download:4.0.2'
         //颜色取色器
-        implementation 'com.github.rtugeek:colorseekbar:2.1.0'
+        implementation 'com.github.rtugeek:colorseekbar:2.0.3'
         //图片/视频选择器
         implementation 'com.lcw.library:imagepicker:2.2.7'
         //滑动器
@@ -100,18 +100,18 @@ android {
 //compat for android support library
         implementation 'com.billy.android:smart-swipe-x:1.1.0'
         //glide
-        implementation 'com.github.bumptech.glide:glide:5.0.5'
-        annotationProcessor 'com.github.bumptech.glide:compiler:5.0.5'
+        implementation 'com.github.bumptech.glide:glide:4.10.0'
+        annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
         //状态栏
         //https://github.com/gyf-dev/ImmersionBar
         implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
         //Zip解压
         implementation 'me.testica:codeeditor:1.0.2'
         // 线性背景
-        implementation 'com.googlecode.plist:dd-plist:1.28'
+        implementation 'com.googlecode.plist:dd-plist:1.16'
         implementation 'com.tananaev:adblib:1.3'
-        implementation 'org.samba.jcifs:jcifs:1.3.14-kohsuke-1'
-        implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.6.0'
+        implementation 'org.samba.jcifs:jcifs:1.3.3'
+        implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.1'
         implementation 'org.nanohttpd:nanohttpd:2.3.1'
         implementation 'com.hzy:un7zip:+'
 
@@ -125,7 +125,7 @@ android {
         implementation "io.noties.markwon:linkify:$markwonVersion"
         implementation "io.noties.markwon:recycler:$markwonVersion"
 
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
         compile('cn.hotapk:fastandrutils:0.8.0') {
             exclude group: 'com.android.support'
         }
@@ -214,9 +214,9 @@ android {
 dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
 //    implementation project(path: ':xh_lib')
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.13.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation files('libs/commons-logging-1.2.jar')
     implementation files('libs/commons-net-3.8.0.jar')
     implementation files('libs/ftplet-api-1.1.1.jar')
@@ -229,8 +229,8 @@ dependencies {
     implementation files('libs\\commons-codec-1.10-rep.jar')
 
     testImplementation "junit:junit:4.13.2"
-    testImplementation "org.robolectric:robolectric:4.16"
-    implementation "androidx.core:core-ktx:1.17.0"
+    testImplementation "org.robolectric:robolectric:4.4"
+    implementation "androidx.core:core-ktx:1.8.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
