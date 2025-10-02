@@ -1651,8 +1651,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout start_command;
     private LinearLayout xuanfu;
     private LinearLayout ziti;
-    private LinearLayout zero_tier;
-    private LinearLayout download_http;
     private LinearLayout vnc_start;
     private LinearLayout xue_hua;
     private LinearLayout rain_back;
@@ -1662,7 +1660,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout yuyan;
     private LinearLayout timer;
     private LinearLayout shiyan_fun;
-    private LinearLayout zerotermux_bbs;
     private LinearLayout key_bord;
     private TextView service_status;
     private TextView service_eg;
@@ -1674,7 +1671,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private TextView xue_hua_start;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
-    private LinearLayout online_sh;
     private LinearLayout beautify;
     private View back_color;
     private View layout_menu;
@@ -1702,7 +1698,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         session_rl = findViewById(R.id.session_rl);
         telegram_group_tv = findViewById(R.id.telegram_group_tv);
         qq_group_tv = findViewById(R.id.qq_group_tv);
-        zerotermux_bbs = findViewById(R.id.zerotermux_bbs);
         rongqi = findViewById(R.id.rongqi);
         layout_menu = findViewById(R.id.layout_menu);
         back_res = findViewById(R.id.back_res);
@@ -1718,8 +1713,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         key_bord = findViewById(R.id.key_bord);
         service_status = findViewById(R.id.service_status);
         service_eg = findViewById(R.id.service_eg);
-        zero_tier = findViewById(R.id.zero_tier);
-        download_http = findViewById(R.id.download_http);
         vnc_start = findViewById(R.id.vnc_start);
         msg_tv = findViewById(R.id.msg_tv);
         xue_fragment = findViewById(R.id.xue_fragment);
@@ -1735,7 +1728,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         zero_fun = findViewById(R.id.zero_fun);
         shiyan_fun = findViewById(R.id.shiyan_fun);
         double_tishi = findViewById(R.id.double_tishi);
-        online_sh = findViewById(R.id.online_sh);
         beautify = findViewById(R.id.beautify);
         back_color = mTermuxActivityRootView.getBack_color();
         back_img = mTermuxActivityRootView.getBack_img();
@@ -1753,8 +1745,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         rongqi.setOnClickListener(this);
         back_res.setOnClickListener(this);
         msg.setOnClickListener(this);
-        online_sh.setOnClickListener(this);
-        zerotermux_bbs.setOnClickListener(this);
         telegram_group_tv.setOnClickListener(this);
         qq_group_tv.setOnClickListener(this);
         files_mulu.setOnClickListener(this);
@@ -1762,8 +1752,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         start_command.setOnClickListener(this);
         xuanfu.setOnClickListener(this);
         ziti.setOnClickListener(this);
-        zero_tier.setOnClickListener(this);
-        download_http.setOnClickListener(this);
         vnc_start.setOnClickListener(this);
         xue_hua.setOnClickListener(this);
         rain_back.setOnClickListener(this);
@@ -2008,34 +1996,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 startActivity(new Intent(this, FontActivity.class));
                 break;
 
-            case R.id.zero_tier:
-                EditDialog editDialog = new EditDialog(this);
-                EditText edit_text = editDialog.getEdit_text();
-                editDialog.getCancel().setText(UUtils.getString(R.string.如何创建服务器));
-                editDialog.getCancel().setVisibility(View.GONE);
-                editDialog.getCancel().setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                editDialog.getOk().setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String s = edit_text.getText().toString();
-                        if (s == null || s.isEmpty()) {
-                            s = "http://10.242.164.19";
-                        }
-                        editDialog.dismiss();
-                        startHttp(s);
-                    }
-                });
-                editDialog.show();
-                break;
-
-            case R.id.download_http:
-                startHttp1(HTTPIP.IP);
-                break;
-
             case R.id.xue_hua:
                 ZTUserBean ztUserBean = UserSetManage.Companion.get().getZTUserBean();
                 ztUserBean.setRainShow(false);
@@ -2117,25 +2077,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 SYFunBoomDialog syFunBoomDialog = new SYFunBoomDialog(this);
                 syFunBoomDialog.show();
                 syFunBoomDialog.setCancelable(true);
-
-                break;
-
-            case R.id.online_sh:
-
-
-                OnLineShDialog mOnLineShDialog = new OnLineShDialog(this);
-
-                mOnLineShDialog.setOnItemClickListener(new OnLineShDialog.OnItemClickListener() {
-                    @Override
-                    public void click(@NotNull String msg) {
-                        mTerminalView.sendTextToTerminal(msg + "\n");
-                        mOnLineShDialog.dismiss();
-                    }
-                });
-
-                mOnLineShDialog.show();
-
-                mOnLineShDialog.setCancelable(true);
 
                 break;
 
