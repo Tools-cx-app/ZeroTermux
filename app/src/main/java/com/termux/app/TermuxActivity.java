@@ -1627,7 +1627,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private ScrollView scrollView_main;
     private LinearLayout file_layout;
     private CardView main_card;
-    private CardView ip_card;
     private ImageView open_image;
     private LinearLayout rongqi;
     private LinearLayout back_res;
@@ -1646,7 +1645,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout key_bord;
     private TextView service_status;
     private TextView service_eg;
-    private TextView ip_status;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
     private View back_color;
@@ -1668,7 +1666,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         scrollView_main = findViewById(R.id.scrollView_main);
         file_layout = findViewById(R.id.file_layout);
         main_card = findViewById(R.id.main_card);
-        ip_card = findViewById(R.id.ip_card);
         open_image = findViewById(R.id.open_image);
         frame_file = findViewById(R.id.frame_file);
         session_rl = findViewById(R.id.session_rl);
@@ -1690,7 +1687,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         firework_view = findViewById(R.id.firework_view);
         timer = findViewById(R.id.timer);
         yuyan = findViewById(R.id.yuyan);
-        ip_status = findViewById(R.id.ip_status);
         zero_fun = findViewById(R.id.zero_fun);
         shiyan_fun = findViewById(R.id.shiyan_fun);
         back_color = mTermuxActivityRootView.getBack_color();
