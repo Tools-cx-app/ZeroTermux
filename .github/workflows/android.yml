@@ -26,8 +26,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4.7.1
         with:
-          distribution: 'adopt'
-          java-version: '11'
+          distribution: 'temurin'
+          java-version: '17'
           
       # 缓存 Gradle 缓存目录
       - name: Cache Gradle dependencies
