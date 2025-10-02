@@ -20,7 +20,7 @@ jobs:
     steps:
       # 检出代码
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       # 设置 Java 环境（Android 编译需要 Java）
       - name: Set up Java
