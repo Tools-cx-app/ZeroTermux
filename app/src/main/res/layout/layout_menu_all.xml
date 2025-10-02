@@ -82,54 +82,6 @@
                                 android:id="@+id/version"
                                 android:text="@string/版本"
                                 android:layout_height="wrap_content" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:textColor="@color/color_ffffff"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:text=" / "
-                                android:layout_height="wrap_content" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:textColor="@color/color_ffffff"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:id="@+id/service_status"
-                                android:text="@string/正在连接"
-                                android:layout_height="wrap_content" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="5dp"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_below="@+id/version"
-                                android:textColor="@color/color_ffffff"
-                                android:textStyle="bold"
-                                android:id="@+id/eg_tv"
-                                android:textSize="10sp"
-                                android:text="@string/版本"
-                                android:layout_height="wrap_content" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:textColor="@color/color_ffffff"
-                                android:textStyle="bold"
-                                android:textSize="10sp"
-                                android:text=" / "
-                                android:layout_height="wrap_content" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:textColor="@color/color_ffffff"
-                                android:textStyle="bold"
-                                android:textSize="10sp"
-                                android:id="@+id/service_eg"
-                                android:text="@string/正在连接"
-                                android:layout_height="wrap_content" />
 
                         </LinearLayout>
 

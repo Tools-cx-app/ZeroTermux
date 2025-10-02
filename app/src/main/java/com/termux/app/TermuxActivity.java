@@ -1633,7 +1633,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout msg;
     private LinearLayout files_mulu;
     private TextView version;
-    private TextView eg_tv;
     private TextView text_start;
     private LinearLayout github;
     private LinearLayout start_command;
@@ -1643,8 +1642,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private LinearLayout timer;
     private LinearLayout shiyan_fun;
     private LinearLayout key_bord;
-    private TextView service_status;
-    private TextView service_eg;
     private FrameLayout xue_fragment;
     private FireworkView firework_view;
     private View back_color;
@@ -1675,13 +1672,10 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         msg = findViewById(R.id.msg);
         files_mulu = findViewById(R.id.files_mulu);
         version = findViewById(R.id.version);
-        eg_tv = findViewById(R.id.eg_tv);
         github = findViewById(R.id.github);
         start_command = findViewById(R.id.start_command);
         text_start = findViewById(R.id.text_start);
         key_bord = findViewById(R.id.key_bord);
-        service_status = findViewById(R.id.service_status);
-        service_eg = findViewById(R.id.service_eg);
         vnc_start = findViewById(R.id.vnc_start);
         xue_fragment = findViewById(R.id.xue_fragment);
         firework_view = findViewById(R.id.firework_view);
@@ -1720,20 +1714,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
         findViewById(R.id.settings).setOnClickListener(
             v -> startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class)));
-
-        setEgInstallStatus();
     }
 
-
-    private void setEgInstallStatus() {
-        version.setText(UUtils.getString(R.string.版本) + " : " + UUtils2.INSTANCE.getVersionName(UUtils.getContext()));
-        String versionName = ZeroCoreManage.getVersionName();
-        if (!TextUtils.isEmpty(versionName)) {
-            eg_tv.setText(UUtils.getString(R.string.engine_vision) + " : " + versionName);
-        } else {
-            eg_tv.setText(UUtils.getString(R.string.engine_vision) + " : " + UUtils.getString(R.string.engine_not_install));
-        }
-    }
 
     /**
      * 刷新状态
