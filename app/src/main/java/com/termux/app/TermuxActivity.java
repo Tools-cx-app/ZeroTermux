@@ -733,7 +733,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             this.back_color.setAlpha(0.3f);
         }
 
-        setSummaryVisible();
         if (FileIOUtils.INSTANCE.isPathVideo()) {
             //有视频
             String pathVideo = FileIOUtils.INSTANCE.getPathVideo();
